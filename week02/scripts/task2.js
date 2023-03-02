@@ -35,7 +35,7 @@ let favFood = ["Pizza", " Lasagna", " and BBQ"];
 document.querySelector("#food").innerHTML = favFood;
 
 // Step 3: declare and instantiate a variable to hold another favorite food
-//favFood.splice(2, 0, "Spaghetti", "Ice Cream");
+
 let moreFood = " Spaghetti";
 
 // Step 4: add the variable holding another favorite food to the favorite food array

@@ -41,12 +41,11 @@ sumButton.addEventListener("click", addNumbers, false);
 
 
 //SUBTRACT FUNCTION SECTION
-function subtract(number1, number2){
-    const total = parseInt(number1) - parseInt(number2);
-    return total;
-}
+const subtract = function(number1, number2){
+   return parseInt(number1) - parseInt(number2)
+};
 
-function subtractNumbers(){
+let subtractNumbers = function(){
     var number1 = document.getElementById("minuend").value;
     var number2 = document.getElementById("subtrahend").value;
     sumNumber = subtract(number1, number2);
@@ -60,10 +59,7 @@ sumButton.addEventListener("click", subtractNumbers, false);
 
 
 //MULTIPLICATION FUNCTION SECTION
-function multiply(number1, number2){
-    const total = parseInt(number1) * parseInt(number2);
-    return total;
-}
+const multiply = (number1, number2) => parseInt(number1) * parseInt(number2);
 
 function multiplyNumbers(){
     var number1 = document.getElementById("factor1").value;
@@ -84,7 +80,7 @@ function divide(number1, number2){
     return total;
 }
 
-function divideNumbers(){
+let divideNumbers = function(){
     var number1 = document.getElementById("dividend").value;
     var number2 = document.getElementById("divisor").value;
     sumNumber = divide(number1, number2);

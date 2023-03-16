@@ -20,6 +20,31 @@
 
 // Step 9: Add additional objects with the same properties for each place you've lived
 
+let moreMe = {
+    name: "Tim Zufelt",
+    photo: "images/IMG_0158.jpeg",
+    favoriteFoods: ["Pizza", "BBQ", "Meat Loaf"],
+    hobbies: ["Coding", "Cars", "BBQ", "Movies"],
+    placesLived: [
+        {
+            place: "Texas",
+            length: "13 Years"
+        },
+        
+        {
+            place: "Georgia",
+            length: "5 Years"
+        },
+
+        {
+            place: "California",
+            length: "16 Years"
+        }
+    ]
+}; 
+
+
+
 
 /* OUTPUT */
 
@@ -42,3 +67,36 @@
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+
+document.getElementById("name").innerHTML = moreMe.name;
+document.querySelector("img").setAttribute('src', 'images/IMG_0158.jpeg');
+document.querySelector("img").setAttribute('alt', 'So Cool!');
+
+
+let favoriteFoodsList = document.getElementById("favorite-foods");
+
+moreMe.favoriteFoods.forEach(function(food){
+let listItem = document.createElement("li");
+
+listItem.textContent = food;
+favoriteFoodsList.appendChild(listItem);
+});
+
+let hobbiesList = document.getElementById("hobbies");
+
+moreMe.hobbies.forEach(function(hobby){
+let listItem = document.createElement("li")
+listItem.textContent = hobby;
+hobbiesList.appendChild(listItem);
+});
+
+let placesLivedList = document.getElementById("places-lived");
+
+moreMe.placesLived.forEach(function(place) {
+let HowLong = document.createElement("dt");
+HowLong.textContent = place.place;
+let cities = document.createElement("dd");
+cities.textContent = place.length;
+placesLivedList.appendChild(HowLong);
+placesLivedList.appendChild(cities);
+});
